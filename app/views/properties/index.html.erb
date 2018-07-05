@@ -1,23 +1,26 @@
 <h1>Inventory</h1>
-<%= link_to 'Add property', new_property_path %>
 
-<table>
+<div id="index_new_link">
+  <%= link_to 'Add property', new_property_path %>
+</div>
+
+<table align="center">
   <tr>
     <th>Name</th>
     <th>Date</th>
     <th>Price</th>
     <th>User</th>
     <th>Status</th>
+    <th>Action</th>
   </tr>
 
   <% @properties.each do |property| %>
     <tr>
-      <td><%= property.name %></td>
+      <td><%= link_to property.name, edit_property_path(property) %></td>
       <td><%= property.date %></td>
       <td><%= property.price %></td>
       <td><%= property.user %></td>
       <td><%= property.status %></td>
-      <td><%= link_to 'Detail', property_path(property) %></td>
       <td><%= link_to 'Delete',
                                 property_path(property),
                                 method: :delete,
