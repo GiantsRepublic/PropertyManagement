@@ -1,1 +1,23 @@
 <h1>Here to add your new property</h1>
+
+<div id="form">
+
+  <%= form_for :property, url: properties_path do |f| %>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+
+    <p>
+      <%= f.label :date %><br>
+      <%= f.text_field :date %>
+    </p>
+
+    <p>
+      <%= f.submit %>
+    </p>
+
+  <% end %>
+
+
+</div>
