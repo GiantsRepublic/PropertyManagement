@@ -1,27 +1,5 @@
 <h1>This is your property</h1>
-<p>
-  <strong>Property name: </strong>
-  <%= @property.name %>
-</p>
 
-<p>
-  <strong>Purchase date: </strong>
-  <%= @property.date %>
-</p>
-
-<p>
-  <strong>Property price: </strong>
-  <%= @property.price %>
-</p>
-
-<p>
-  <strong>Property user: </strong>
-  <%= @property.user %>
-</p>
-
-<p>
-  <strong>Property status: </strong>
-  <%= @property.status %>
-</p>
+<%= render 'form' %>
 
 <%= link_to 'Back', properties_path %>
