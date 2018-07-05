@@ -1,4 +1,4 @@
-<h1>Property List</h1>
+<h1>Inventory</h1>
 <%= link_to 'Add property', new_property_path %>
 
 <table>
@@ -19,6 +19,10 @@
       <td><%= property.status %></td>
       <td><%= link_to 'Show', property_path(property) %></td>
       <td><%= link_to 'edit', edit_property_path(property) %> </td>
+      <td><%= link_to 'Delete',
+                                property_path(property),
+                                method: :delete,
+                                data: {confirm: 'Are you sure to delete this property?'} %></td>
     </tr>
   <% end %>
 </table>
