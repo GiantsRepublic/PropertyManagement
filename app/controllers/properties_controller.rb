@@ -4,13 +4,18 @@ class PropertiesController < ApplicationController
   end
 
   def new
+    @property = Property.new
   end
 
   def create
     @property = Property.new(property_params)
 
-    @property.save
-    redirect_to @property
+    if @property.save
+      redirect_to @property
+    else
+      render 'new'
+    end
+
   end
 
   def show
