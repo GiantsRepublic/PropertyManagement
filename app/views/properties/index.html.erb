@@ -1,0 +1,22 @@
+<h1>Property List</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Date</th>
+    <th>Price</th>
+    <th>User</th>
+    <th>Status</th>
+  </tr>
+
+  <% @properties.each do |property| %>
+    <tr>
+      <td><%= property.name %></td>
+      <td><%= property.date %></td>
+      <td><%= property.price %></td>
+      <td><%= property.user %></td>
+      <td><%= property.status %></td>
+      <td><%= link_to 'Show', property_path(property) %></td>
+    </tr>
+  <% end %>
+</table>

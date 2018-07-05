@@ -1,6 +1,9 @@
 class PropertiesController < ApplicationController
-  def new
+  def index
+    @properties = Property.all
+  end
 
+  def new
   end
 
   def create
